@@ -5,7 +5,9 @@ This project is an attempt at a continuous integration tool, like Jenkins, howev
 
 ## Features
 - [ ] compile the application with a command
+  - [ ] works with maven java projects
 - [ ] if the code compiles test the application with the same command
+   - [ ] works with maven, java projects
 - [ ] push the results to github if tests succeed
 
 ## User Stories
