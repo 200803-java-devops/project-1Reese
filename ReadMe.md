@@ -1,19 +1,17 @@
-# Project 1
+# JANKins
 
 ## Overview
----
-This project has yet to be decided on.
+This project is an attempt at a continuous integration tool, like Jenkins, however it will be much simplier, and not complete the software dev life cycle. The project to start will be solely about building the application, testing it, and then if all tests pass commiting it, and pushing it github.com.
 
 ## Features
----
-TODO
+- [ ] compile the application with a command
+- [ ] test the application with the same command
+- [ ] push the results to github if tests suceed.
 
 ## User Stories
----
-TODO
+As a Developer I would like a process the builds, tests, and commits and pushes my code with only one step by me so that my devlopement process will be quicker and I never push borken code.
 
 ## Tech Stack
----
 - [x] JavaSE 8
 - [x] JavaEE 7:
   - [x] Servlet
@@ -25,7 +23,6 @@ TODO
 - [x] Git SCM
 
 ## Usage
----
 ### Run
 ```mvn exec:java```
 
