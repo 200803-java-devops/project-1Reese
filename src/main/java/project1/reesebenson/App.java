@@ -1,6 +1,9 @@
 package project1.reesebenson;
 
 import java.io.File;
+import java.util.List;
+import java.util.PriorityQueue;
+
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
 
@@ -24,6 +27,9 @@ public class App {
         } catch (LifecycleException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            System.out.println();
         }
     }
+
+    
 }
