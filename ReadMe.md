@@ -5,8 +5,8 @@ This project is an attempt at a continuous integration tool, like Jenkins, howev
 
 ## Features
 - [ ] compile the application with a command
-- [ ] test the application with the same command
-- [ ] push the results to github if tests suceed.
+- [ ] if the code compiles test the application with the same command
+- [ ] push the results to github if tests succeed
 
 ## User Stories
 As a Developer I would like a process the builds, tests, and commits and pushes my code with only one step by me so that my devlopement process will be quicker and I never push borken code.
