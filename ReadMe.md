@@ -15,7 +15,11 @@ This project is an attempt at a continuous integration tool, like Jenkins, howev
 - [ ] push the results to github if tests succeed
 
 ## User Stories
-As a Developer I would like a process the builds, tests, and pushes my code to git hub when I commit my code if all of the previous steps succeed so that my devlopement process will be quicker and I never push borken code.
+As a Developer I would like a process the builds my code when I commit so that I know not to push commits with compilation errors.
+
+As a Devloper I would like a process that tests my code when I commit so that I Know not to push a commit that doesn't pass my unit tests.
+
+As a developer I would like a process that pushes my code to git hub when I commit my code if it passes comilation and tests so that my devlopement process will be quicker and I never push borken code.
 
 ## Tech Stack
 - [x] JavaSE 8
