@@ -1,13 +1,11 @@
 package project1.reesebenson;
 
 import java.io.File;
-import java.util.List;
-import java.util.PriorityQueue;
 
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
 
-import project1.reesebenson.Controllers.DogController;
+import project1.reesebenson.Controllers.GitRepoController;
 
 /**
  * Hello world!
@@ -19,9 +17,9 @@ public class App {
         server.setPort(8080);
         server.setBaseDir(new File("target/tomcat").getAbsolutePath());
         server.getConnector();
-        server.addWebapp("/project1", new File("src/main/static").getAbsolutePath());
+        server.addWebapp("/jankins", new File("src/main/static").getAbsolutePath());
         System.out.println();
-        server.addServlet("/project1", "DogController", DogController.class.getName()).addMapping("/dog");
+        server.addServlet("/jankins", "GitRepoController", GitRepoController.class.getName()).addMapping("/Repo");
         try {
             server.start();
         } catch (LifecycleException e) {
