@@ -29,7 +29,8 @@ public class GitRepoController extends HttpServlet {
             if(MvnOutputParser.parseTestForSuccess((result = executeCommand("mvn test", RepoPath)))){
                 System.out.println("Tests Success");
                 resp.getWriter().println("Build Success");
-                GitExecutor.push(RepoPath);
+                GitExecutor git = new GitExecutor(RepoPath);
+                resp.getWriter().println(git.push());
                 
             }else{
                 System.out.println("Tests Failure");

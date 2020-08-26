@@ -3,12 +3,10 @@ package project1.reesebenson.ProcessUtils;
 import project1.reesebenson.Parsers.GitOutputParser;
 import static project1.reesebenson.ProcessUtils.ProcExecutor.executeCommand;
 
-import org.graalvm.compiler.core.common.type.ArithmeticOpTable.BinaryOp.Rem;;
-
 public class GitExecutor {
     private String executionLocation;
 
-    GitExecutor(String executionLocation){
+    public GitExecutor(String executionLocation){
         this.executionLocation = executionLocation;
     }
 

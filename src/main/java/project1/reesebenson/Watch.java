@@ -17,7 +17,6 @@ import project1.reesebenson.ConnectionUtils.ParameterStringBuilder;
 public class Watch {
     public static void main(String[] args) {
         if (args.length == 1) {
-
             String RepoPath = args[0];
             File repo = new File(RepoPath);
             if (!repo.exists() || !repo.isDirectory()) {
