@@ -22,6 +22,7 @@ public class App {
         server.addServlet("/jankins", "GitRepoController", GitRepoController.class.getName()).addMapping("/Repo");
         try {
             server.start();
+            server.getServer().await();
         } catch (LifecycleException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

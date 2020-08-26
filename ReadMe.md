@@ -4,13 +4,13 @@
 This project is an attempt at a continuous integration tool, like Jenkins, however it will be much simplier, and not complete the software dev life cycle. The project to start will be solely about building the application, testing it, and then if all tests pass commiting it, and pushing it github.com.
 
 ## Features
-- [ ] watch the repository for a commit
+- [x] watch the repository for a commit
 
-- [ ] pull code from repository to server when repo is updated
-  - [ ] compile the application from commit
-    - [ ] works with maven java projects
-  - [ ] if the code compiles test the application with the same command
-    - [ ] works with maven, java projects
+- [x] Acess git repository from local server when repo is updated
+  - [x] compile the application from commit
+    - [x] works with maven java projects
+  - [x] if the code compiles test the application
+    - [x] works with maven, java projects
 
 - [ ] push the results to github if tests succeed
 
