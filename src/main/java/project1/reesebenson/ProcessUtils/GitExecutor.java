@@ -12,7 +12,7 @@ public class GitExecutor {
 
     public String push(){
         if(!HasRemote()){
-            return "Use command: \n \t git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url> \n to add a remote repository to push to on sucessfully commits";
+            return "Failed to Push, No remote branch found. \n\tUse command: \n \t git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url> \n to add a remote repository to push to on sucessfully commits";
         }
         String remote = findRemote();
         String currentBranch = GitOutputParser.PraseCurrentBranchFromGitBranch(executeCommand("git branch", executionLocation));
@@ -21,11 +21,12 @@ public class GitExecutor {
     }
 
     private String findRemote(){
-        String Remote = executeCommand("git branch -r", executionLocation);
-       return GitOutputParser.PasreRemoteFromGitBranchDashR(Remote);
+        String Remote = executeCommand("git remote show", executionLocation);
+       return GitOutputParser.PasreRemoteFromGitRemoteShow(Remote);
     }
 
     private boolean HasRemote(){
-        return executeCommand("git branch -r", executionLocation) != null;
+        String res = executeCommand("git remote show", executionLocation);
+        return res != null && res.length() > 0;
     }
 }

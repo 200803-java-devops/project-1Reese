@@ -26,7 +26,7 @@ public class ProcExecutor {
             while(reader.ready()){
                 output += reader.readLine() + "\n";
             }
-        } catch (InterruptedException e) {
+        }catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }catch (IOException e1) {

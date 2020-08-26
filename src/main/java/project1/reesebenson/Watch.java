@@ -1,8 +1,10 @@
 package project1.reesebenson;
 
+import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -41,8 +43,13 @@ public class Watch {
                                 byte[] input = jsonInputString.getBytes("utf-8");
                                 os.write(input, 0, input.length);			
                             }
-                            int resp = connection.getResponseCode();
-                            System.out.println(resp);
+                            StringBuilder responseBody = new StringBuilder();
+                            BufferedReader reader = new BufferedReader( new InputStreamReader(connection.getInputStream()));
+                           while(reader.ready()){
+                                responseBody.append(reader.readLine() + "\n");
+                           }
+                            System.out.println("Response:" + connection.getResponseCode() + "\n" + responseBody);
+                            reader.close();
                         } catch (IOException e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
