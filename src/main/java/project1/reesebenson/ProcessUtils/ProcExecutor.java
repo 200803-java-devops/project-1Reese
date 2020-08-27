@@ -20,15 +20,21 @@ public class ProcExecutor {
         int exited = 0;
         String output = "";
         try {
-            process = builder.start();
+			process  = builder.start();
+                
+		
+        try(BufferedReader inputReader = new BufferedReader(new InputStreamReader(process.getInputStream())); BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream())) ) {
             exited = process.waitFor();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            while(reader.ready()){
-                output += reader.readLine() + "\n";
+            while(errorReader.ready()){
+                output += errorReader.readLine() + "\n";
             }
-        }catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            while(inputReader.ready()){
+                output += inputReader.readLine() + "\n";
+            }
+            }catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }catch (IOException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();
