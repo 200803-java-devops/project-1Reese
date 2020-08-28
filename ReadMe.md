@@ -9,13 +9,15 @@ This project is an attempt at a continuous integration tool, like Jenkins, howev
 - [x] Acess git repository from local server when repo is updated
   - [x] compile the application from commit
     - [x] works with maven java projects
-    - [ ] notify developer of results
+    - [x] notify developer of results
   - [x] if the code compiles test the application
     - [x] works with maven, java projects
-    - [ ] notify devloper of results
+    - [x] notify devloper of results
 
 - [x] push the results to github if tests succeed
-  -[ ] notify developer of results
+  -[x] notify developer of results
+
+- [ ] track commit sucesses in Database
 
 ## User Stories
 As a Developer I would like a process the builds my code when I commit so that I know not to push commits with compilation errors.
@@ -28,13 +30,15 @@ As a Developer I would like to be notified when my tests fail after commitng, so
 
 As a developer I would like to be notified when my build fails after commiting so that I can be aware my code did not compile.
 
-As a Developer I would like to be notified of the results of a auto push when I commit working code.
+As a Developer I would like to be notified of the results of a auto push when I commit working code so that I can be aware of my remote repositories state.
+
+As a Developer I would like to have the history of my commits build, and test results saved so I can later view them.
 
 ## Tech Stack
 - [x] JavaSE 8
 - [x] JavaEE 7:
   - [x] Servlet
-- [ ] PostgreSQL
+- [x] PostgreSQL
 - [x] Maven 3
 - [ ] JUnit 5
 - [ ] Docker
