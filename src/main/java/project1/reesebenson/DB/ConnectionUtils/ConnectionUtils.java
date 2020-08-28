@@ -1,4 +1,4 @@
-package project1.reesebenson.ConnectionUtils;
+package project1.reesebenson.DB.ConnectionUtils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
