@@ -40,6 +40,8 @@ public class MvnGitPipline implements IPipeLine<CommitEntity> {
         if(compile())
             if(test())    
                 push();
+        commit.setUser(git.getCurrentUser());
+        commit.setCommit_id(git.gitHeadId());
         return commit;
     }
 

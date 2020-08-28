@@ -4,7 +4,7 @@ import java.util.List;
 
 import project1.reesebenson.DB.Entities.CommitEntity;
 
-public class commitDao implements IDao<CommitEntity, String>{
+public class CommitDao implements IDao<CommitEntity, String>{
     
     public List<CommitEntity> getAll(int projectId){
         return null;

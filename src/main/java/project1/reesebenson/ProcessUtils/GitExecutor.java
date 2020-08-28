@@ -34,4 +34,14 @@ public class GitExecutor {
         String res = executeCommand("git log", executionLocation);
         return res != null && res.length() > 0 ? res : null;
     }
+
+    public String getCurrentUser(){
+        String res = executeCommand("git config user.name", executionLocation);
+        return res != null && res.length() > 0 ? res : "anonymous";
+    }
+
+	public String gitHeadId() {
+		String res = executeCommand("git rev-parse HEAD", executionLocation);
+        return res != null && res.length() > 0 ? res : "unknown";
+	}
 }
