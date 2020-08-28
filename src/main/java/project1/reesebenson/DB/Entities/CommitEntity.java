@@ -3,14 +3,14 @@ package project1.reesebenson.DB.Entities;
 public class CommitEntity {
     private String commit_id;
     private int project_id;
-    private String user;
+    private String commiter;
     private boolean build_success;
     private boolean test_success;
 
     public CommitEntity(String commit_id, int project_id, String user, boolean build_success, boolean test_success) {
         this.commit_id = commit_id;
         this.project_id = project_id;
-        this.user = user;
+        this.commiter = user;
         this.build_success = build_success;
         this.test_success = test_success;
     }
@@ -36,11 +36,11 @@ public class CommitEntity {
     }
 
     public String getUser() {
-        return user;
+        return commiter;
     }
 
     public void setUser(String user) {
-        this.user = user;
+        this.commiter = user;
     }
 
     public int getProject_id() {
