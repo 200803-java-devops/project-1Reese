@@ -10,9 +10,9 @@ public class GitExecutor {
         this.executionLocation = executionLocation;
     }
 
-    public String push(){
+    public Pair<Boolean,String> push(){
         if(!HasRemote()){
-            return "Failed to Push, No remote branch found. \n\tUse command: \n \t git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url> \n to add a remote repository to push to on sucessfully commits";
+            return new Pair<> (false,"Failed to Push, No remote branch found. \n\tUse command: \n \t git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url> \n to add a remote repository to push to on sucessfully commits");
         }
         String remote = findRemote();
         String currentBranch = GitOutputParser.PraseCurrentBranchFromGitBranch(executeCommand("git branch", executionLocation));

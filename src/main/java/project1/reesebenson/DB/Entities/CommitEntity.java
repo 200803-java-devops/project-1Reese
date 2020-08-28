@@ -6,8 +6,41 @@ public class CommitEntity {
     private String commiter;
     private boolean build_success;
     private boolean test_success;
+    private String message;
+    private boolean auto_push;
 
-    public CommitEntity(String commit_id, int project_id, String user, boolean build_success, boolean test_success) {
+    public CommitEntity() {
+
+    }
+
+    public boolean isAuto_push() {
+        return auto_push;
+    }
+
+    public void setAuto_push(boolean auto_push) {
+        this.auto_push = auto_push;
+    }
+
+    public CommitEntity(String commit_id, int project_id, String commiter, boolean build_success, boolean test_success,
+            String message, boolean auto_push) {
+        this.commit_id = commit_id;
+        this.project_id = project_id;
+        this.commiter = commiter;
+        this.build_success = build_success;
+        this.test_success = test_success;
+        this.message = message;
+        this.auto_push = auto_push;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public CommitEntity(String commit_id, int project_id, String user, boolean build_success, boolean test_success, boolean auto_push_success) {
         this.commit_id = commit_id;
         this.project_id = project_id;
         this.commiter = user;
@@ -55,4 +88,11 @@ public class CommitEntity {
         this.commit_id = commit_id;
     }
 
+	public void appendToMessage(String add) {
+        if(message != null){
+            this.message += add;
+        }
+        else
+            this.message = add;
+	}
 }
