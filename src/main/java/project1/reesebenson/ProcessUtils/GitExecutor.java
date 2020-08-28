@@ -29,4 +29,9 @@ public class GitExecutor {
         String res = executeCommand("git remote show", executionLocation);
         return res != null && res.length() > 0;
     }
+
+    public String log(){
+        String res = executeCommand("git log", executionLocation);
+        return res != null && res.length() > 0 ? res : null;
+    }
 }
