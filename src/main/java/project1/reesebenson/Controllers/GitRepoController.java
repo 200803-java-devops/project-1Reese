@@ -40,8 +40,7 @@ public class GitRepoController extends HttpServlet {
         CommitEntity commit = pipline.runall();
         resp.getWriter().write(commit.getMessage());
         ProjectEntity project = ProjectFactory.createProject(RepoPath);
-        daoManager.save(project, commit);
-        
+        daoManager.save(project, commit);  
     }
 
     @Override
