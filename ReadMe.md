@@ -5,6 +5,7 @@ This project is an attempt at a continuous integration tool, like Jenkins, howev
 
 ## Features
 - [x] watch the repository for a commit
+      - Code found in companion Repo [JANKins Watch](https://github.com/200803-java-devops/Reese_Project_1_Jankins_Watch)
 
 - [x] Acess git repository from local server when repo is updated
   - [x] compile the application from commit
@@ -17,7 +18,7 @@ This project is an attempt at a continuous integration tool, like Jenkins, howev
 - [x] push the results to github if tests succeed
   -[x] notify developer of results
 
-- [ ] track commit sucesses in Database
+- [x] track commit sucesses in Database
 
 ## User Stories
 As a Developer I would like a process the builds my code when I commit so that I know not to push commits with compilation errors.
@@ -41,8 +42,8 @@ As a Developer I would like to have the history of my commits build, and test re
 - [x] PostgreSQL
 - [x] Maven 3
 - [ ] JUnit 5
-- [ ] Docker
-- [ ] Amazon Web Services
+- [x] Docker
+- [x] Amazon Web Services
 - [x] Git SCM
 
 ## Usage
