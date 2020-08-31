@@ -10,6 +10,11 @@ public class ConnectionUtils {
     private static String password;
 
     public static Connection getConnection() throws SQLException {
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (java.lang.ClassNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
         return DriverManager.getConnection(url, username, password);
     }
 
