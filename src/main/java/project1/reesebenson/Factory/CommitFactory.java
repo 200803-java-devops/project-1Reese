@@ -1,7 +1,5 @@
 package project1.reesebenson.Factory;
 
-import java.util.Map;
-
 import project1.reesebenson.DB.Entities.CommitEntity;
 
 public class CommitFactory {

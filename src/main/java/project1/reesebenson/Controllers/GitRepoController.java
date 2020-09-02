@@ -12,10 +12,8 @@ import project1.reesebenson.DB.Dao.ProjectDao;
 import project1.reesebenson.DB.Entities.CommitEntity;
 import project1.reesebenson.DB.Entities.ProjectEntity;
 import project1.reesebenson.Factory.ProjectFactory;
-import project1.reesebenson.ProcessUtils.GitExecutor;
 import project1.reesebenson.ProcessUtils.IPipeLine;
 import project1.reesebenson.ProcessUtils.MvnGitPipline;
-import project1.reesebenson.ProcessUtils.OSExecutor;
 
 public class GitRepoController extends HttpServlet {
 

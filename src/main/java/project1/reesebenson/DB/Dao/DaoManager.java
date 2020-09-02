@@ -1,8 +1,7 @@
 package project1.reesebenson.DB.Dao;
-import project1.reesebenson.DB.Dao.ProjectDao;
+
 import project1.reesebenson.DB.Entities.CommitEntity;
 import project1.reesebenson.DB.Entities.ProjectEntity;
-import project1.reesebenson.DB.Dao.CommitDao;
 
 public class DaoManager{
     ProjectDao projectDao;
