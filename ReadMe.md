@@ -41,7 +41,7 @@ As a Developer I would like to have the history of my commits build, and test re
   - [x] Servlet
 - [x] PostgreSQL
 - [x] Maven 3
-- [ ] JUnit 5
+- [x] JUnit 5
 - [x] Docker
 - [x] Amazon Web Services
 - [x] Git SCM
