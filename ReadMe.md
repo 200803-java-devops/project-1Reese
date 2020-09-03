@@ -35,6 +35,8 @@ As a Developer I would like to be notified of the results of a auto push when I 
 
 As a Developer I would like to have the history of my commits build, and test results saved so I can later view them.
 
+As a developer I would like to be able to retrive my commit history from resful endpoints, so I can find them easily.
+
 ## Tech Stack
 - [x] JavaSE 8
 - [x] JavaEE 7:
