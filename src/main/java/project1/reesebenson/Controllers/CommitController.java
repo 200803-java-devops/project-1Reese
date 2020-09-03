@@ -16,6 +16,10 @@ import project1.reesebenson.DB.Entities.CommitEntity;
 import project1.reesebenson.Parsers.URIParser;
 
 public class CommitController extends HttpServlet{
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
     private DaoManager daoManager;
 
     @Override

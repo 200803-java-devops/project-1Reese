@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import project1.reesebenson.DB.ConnectionUtils.ConnectionUtils;
-import project1.reesebenson.DB.Entities.CommitEntity;
 import project1.reesebenson.DB.Entities.ProjectEntity;
 
 public class ProjectDao implements IDao<ProjectEntity, Integer> {
