@@ -8,7 +8,9 @@ import java.util.Properties;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
 
+import project1.reesebenson.Controllers.CommitController;
 import project1.reesebenson.Controllers.GitRepoController;
+import project1.reesebenson.Controllers.ProjectsController;
 import project1.reesebenson.DB.ConnectionUtils.ConnectionUtils;
 
 /**
@@ -25,6 +27,8 @@ public class App {
         server.addWebapp("/jankins", new File("src/main/static").getAbsolutePath());
         System.out.println();
         server.addServlet("/jankins", "GitRepoController", GitRepoController.class.getName()).addMapping("/Repo");
+        server.addServlet("/jankins", "ProjectsController", ProjectsController.class.getName()).addMapping("/projects/*");
+        server.addServlet("/jankins", "CommitController", CommitController.class.getName()).addMapping("/commits/*");
         try {
             server.start();
             server.getServer().await();

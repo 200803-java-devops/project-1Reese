@@ -41,7 +41,7 @@ public class GitExecutor {
     }
 
 	public String gitHeadId() {
-		String res = executeCommand("git rev-parse HEAD", executionLocation);
+		String res = executeCommand("git rev-parse HEAD", executionLocation).strip();
         return res != null && res.length() > 0 ? res : "unknown";
 	}
 }
